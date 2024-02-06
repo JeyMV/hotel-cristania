@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Hoteel Cristânia</title>
+    <title>Hotel Cristânia</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -92,12 +92,15 @@
                         <img class="w-100" src="img/carousel-1.jpg" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Vivendo um Luxo</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious
-                                    Hotel</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our
-                                    Rooms</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Vivendo um
+                                    Luxo</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Descubra um Hotel Luxuoso de
+                                    Marca</h1>
+                                <a href="./quartos.php"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Ver
+                                    Quartos</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Reserve um
+                                    Quarto</a>
                             </div>
                         </div>
                     </div>
@@ -105,13 +108,14 @@
                         <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury
-                                    Living</h6>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand Luxurious
-                                    Hotel</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Our
-                                    Rooms</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book A Room</a>
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Viva O
+                                    Conforto</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">A sua Luxuosa casa longe e
+                                    Fora Casa.</h1>
+                                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Ver
+                                    quartos</a>
+                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Reserve um
+                                    Quarto</a>
                             </div>
                         </div>
                     </div>
@@ -119,12 +123,12 @@
                 <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden">Próximo</span>
                 </button>
             </div>
         </div>
@@ -141,18 +145,20 @@
                                 <div class="col-md-3">
                                     <div class="date" id="date1" data-target-input="nearest">
                                         <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
+                                            placeholder="Data de entrada" data-target="#date1"
+                                            data-toggle="datetimepicker" />
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="date" id="date2" data-target-input="nearest">
                                         <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check out" data-target="#date2" data-toggle="datetimepicker" />
+                                            placeholder="Data de saída" data-target="#date2"
+                                            data-toggle="datetimepicker" />
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <select class="form-select">
-                                        <option selected>Adult</option>
+                                        <option selected value="0">Adulto</option>
                                         <option value="1">Adult 1</option>
                                         <option value="2">Adult 2</option>
                                         <option value="3">Adult 3</option>
@@ -160,7 +166,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <select class="form-select">
-                                        <option selected>Child</option>
+                                        <option selected value="0">Criança</option>
                                         <option value="1">Child 1</option>
                                         <option value="2">Child 2</option>
                                         <option value="3">Child 3</option>
@@ -169,7 +175,7 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
+                            <button class="btn btn-primary w-100">Submeter</button>
                         </div>
                     </div>
                 </div>
@@ -183,8 +189,9 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
-                        <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Hotelier</span></h1>
+                        <h6 class="section-title text-start text-primary text-uppercase">Sobre nós</h6>
+                        <h2 class="mb-4">Bem-vindo a <span class="text-primary text-uppercase">Hotel Cristânia</span>
+                        </h2>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
                             diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
                             dolore erat amet</p>
@@ -193,8 +200,8 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">Rooms</p>
+                                        <h2 class="mb-1" data-toggle="counter-up">24</h2>
+                                        <p class="mb-0">Quartos</p>
                                     </div>
                                 </div>
                             </div>
@@ -202,8 +209,8 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">Staffs</p>
+                                        <h2 class="mb-1" data-toggle="counter-up">200</h2>
+                                        <p class="mb-0">Funcionários</p>
                                     </div>
                                 </div>
                             </div>
@@ -211,13 +218,13 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                        <p class="mb-0">Clients</p>
+                                        <h2 class="mb-1" data-toggle="counter-up">500</h2>
+                                        <p class="mb-0">Clientes</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore Mais</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="row g-3">
@@ -249,8 +256,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Rooms</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Rooms</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Quartos</h6>
+                    <h1 class="mb-5">Veja Nossos <span class="text-primary text-uppercase"> Quartos</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -258,11 +265,12 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/room-1.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Kz.
+                                    5.000/Noite</small>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Junior Suite</h5>
+                                    <h5 class="mb-0">Suite</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -272,17 +280,17 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3
-                                        Bed</small>
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2
-                                        Bath</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>1
+                                        Cama</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>1
+                                        Banheiro</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                                     lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Mais Detalhes</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Reservar Agora</a>
                                 </div>
                             </div>
                         </div>
@@ -292,11 +300,12 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/room-2.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Kz.
+                                    7.000/Noite</small>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Executive Suite</h5>
+                                    <h5 class="mb-0">Quarto Normal</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -306,17 +315,17 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3
-                                        Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>2
+                                        Camas</small>
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2
-                                        Bath</small>
+                                        Banheiro</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                                     lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Mais Detalhes</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Reserve Agora</a>
                                 </div>
                             </div>
                         </div>
@@ -326,11 +335,11 @@
                             <div class="position-relative">
                                 <img class="img-fluid" src="img/room-3.jpg" alt="">
                                 <small
-                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                                    class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$5.000/Noite</small>
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Super Deluxe</h5>
+                                    <h5 class="mb-0">Suite</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -340,17 +349,17 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3
-                                        Bed</small>
+                                    <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>2
+                                        Camas</small>
                                     <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2
-                                        Bath</small>
+                                        Banheiro</small>
                                     <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos
                                     lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
-                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">Mais detalhes</a>
+                                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">reserve agora</a>
                                 </div>
                             </div>
                         </div>
@@ -366,13 +375,13 @@
             <div class="row g-0">
                 <div class="col-md-6 bg-dark d-flex align-items-center">
                     <div class="p-5">
-                        <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
-                        <h1 class="text-white mb-4">Discover A Brand Luxurious Hotel</h1>
+                        <h6 class="section-title text-start text-white text-uppercase mb-3">Vida de Luxo</h6>
+                        <h1 class="text-white mb-4">Desfrute dos Melhores Quartos do Hotel Cristânia.</h1>
                         <p class="text-white mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
                             diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
                             magna dolore erat amet</p>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
-                        <a href="" class="btn btn-light py-md-3 px-md-5">Book A Room</a>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Ver Quartos</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Reserve um Quarto</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -410,8 +419,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Serviços</h6>
+                    <h1 class="mb-5">Explore Nosso <span class="text-primary text-uppercase">Serviços</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -422,7 +431,7 @@
                                     <i class="fa fa-hotel fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Rooms & Appartment</h5>
+                            <h5 class="mb-3">Quartos e Suites</h5>
                             <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
                                 sed diam stet diam sed stet lorem.</p>
                         </a>
@@ -435,7 +444,7 @@
                                     <i class="fa fa-utensils fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Food & Restaurant</h5>
+                            <h5 class="mb-3">Restaurante</h5>
                             <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
                                 sed diam stet diam sed stet lorem.</p>
                         </a>
@@ -448,7 +457,7 @@
                                     <i class="fa fa-spa fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Spa & Fitness</h5>
+                            <h5 class="mb-3">Fitness</h5>
                             <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
                                 sed diam stet diam sed stet lorem.</p>
                         </a>
@@ -461,7 +470,7 @@
                                     <i class="fa fa-swimmer fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Sports & Gaming</h5>
+                            <h5 class="mb-3">Desporto e Jogos</h5>
                             <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
                                 sed diam stet diam sed stet lorem.</p>
                         </a>
@@ -474,7 +483,7 @@
                                     <i class="fa fa-glass-cheers fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Event & Party</h5>
+                            <h5 class="mb-3">Eventos e Festas</h5>
                             <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
                                 sed diam stet diam sed stet lorem.</p>
                         </a>
@@ -487,7 +496,7 @@
                                     <i class="fa fa-dumbbell fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">GYM & Yoga</h5>
+                            <h5 class="mb-3">Ginásio & MMA</h5>
                             <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem
                                 sed diam stet diam sed stet lorem.</p>
                         </a>
@@ -551,8 +560,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Nossa equipe</h6>
+                    <h1 class="mb-5">Nossos <span class="text-primary text-uppercase">Funcionários</span></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -647,13 +656,13 @@
                 <div class="col-lg-10 border rounded p-1">
                     <div class="border rounded text-center p-1">
                         <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span>
+                            <h4 class="mb-4">Subscreva <span class="text-primary text-uppercase">Newsletter</span>
                             </h4>
                             <div class="position-relative mx-auto" style="max-width: 400px;">
                                 <input class="form-control w-100 py-3 ps-4 pe-5" type="text"
-                                    placeholder="Enter your email">
+                                    placeholder="Digite o seu e-mail">
                                 <button type="button"
-                                    class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                                    class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submeter</button>
                             </div>
                         </div>
                     </div>
@@ -670,21 +679,16 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
                             <a href="index.html">
-                                <h1 class="text-white text-uppercase mb-3">Hotelier</h1>
+                                <h1 class="text-white text-uppercase mb-3">H. CRISTÂNIA</h1>
                             </a>
-                            <p class="text-white mb-0">
-                                Download <a class="text-dark fw-medium"
-                                    href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>,
-                                build a professional website for your hotel business and grab the attention of new
-                                visitors upon your site’s launch.
-                            </p>
+
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contactos</h6>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Luanda Talatona, Camama, Angola</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+244 9xx xxx xxx</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@examplo.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -695,20 +699,20 @@
                     <div class="col-lg-5 col-md-12">
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Links</h6>
+                                <a class="btn btn-link" href="">Sobre nós</a>
+                                <a class="btn btn-link" href="">Contacte-nos</a>
                                 <a class="btn btn-link" href="">Privacy Policy</a>
                                 <a class="btn btn-link" href="">Terms & Condition</a>
                                 <a class="btn btn-link" href="">Support</a>
                             </div>
                             <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="">Food & Restaurant</a>
-                                <a class="btn btn-link" href="">Spa & Fitness</a>
-                                <a class="btn btn-link" href="">Sports & Gaming</a>
-                                <a class="btn btn-link" href="">Event & Party</a>
-                                <a class="btn btn-link" href="">GYM & Yoga</a>
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Serviços</h6>
+                                <a class="btn btn-link" href="">Restaurante</a>
+                                <a class="btn btn-link" href="">Fitness</a>
+                                <a class="btn btn-link" href="">Esportes e Jogos</a>
+                                <a class="btn btn-link" href="">Eventos e Festas</a>
+                                <a class="btn btn-link" href="">Ginásio e MMA</a>
                             </div>
                         </div>
                     </div>
@@ -718,16 +722,17 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            &copy; <a class="border-bottom" href="#">HOTEL CRISTÂNIA</a>, Todos os direitos
+                            Reservados.
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            Criado por <a class="border-bottom" href="https://htmlcodex.com">MR PHP</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
                                 <a href="">Home</a>
                                 <a href="">Cookies</a>
-                                <a href="">Help</a>
+                                <a href="">Ajuda</a>
                                 <a href="">FQAs</a>
                             </div>
                         </div>
