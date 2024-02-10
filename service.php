@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="en">
 
 <head>
     <?php
-    $title_page = 'Quartos | Hotel Cristânia';
+    $title_page = 'Serviços | Hotel Cristânia';
     require_once './src/includes/layout/header/metas.php';
     ?>
 </head>
@@ -23,15 +23,16 @@
         <?php require './src/includes/layout/header/menu.php'; ?>
         <!-- Header End -->
 
+
         <!-- Page Header Start -->
         <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Quartos</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="./">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Quartos</li>
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Serviços</li>
                         </ol>
                     </nav>
                 </div>
@@ -44,21 +45,20 @@
         <?php include './src/view/components/reservas.php'; ?>
         <!-- Booking End -->
 
-
-        <!-- Room Start -->
-        <?php include './src/view/components/quartos.php'; ?>
-        <!-- Room End -->
+        <!-- Service Start -->
+        <?php include './src/view/components/servicos.php'; ?>
+        <!-- Service End -->
 
 
         <!-- Testimonial Start -->
         <?php include './src/view/components/testemunho.php'; ?>
         <!-- Testimonial End -->
 
-
-
+        
         <!-- Newsletter Start -->
         <?php include './src/view/components/newlatter.php'; ?>
         <!-- Newsletter Start -->
+
 
         <!-- Footer Start -->
         <?php require './src/includes/layout/footer/footer.php'; ?>
