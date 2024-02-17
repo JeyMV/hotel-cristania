@@ -1,7 +1,7 @@
 <div class="container-fluid bg-dark px-0">
     <div class="row gx-0">
         <div class="col-lg-3 bg-dark d-none d-lg-block">
-            <a href="index.html"
+            <a href="./index.php"
                 class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                 <h1 class="m-0 text-primary text-uppercase">HCR</h1>
             </a>
@@ -41,19 +41,30 @@
                         <a href="./sobre.php" class="nav-item nav-link">Sobre</a>
                         <a href="./service.php" class="nav-item nav-link">Serviços</a>
                         <a href="./quartos.php" class="nav-item nav-link">Quartos</a>
+                        <a href="contact.php" class="nav-item nav-link">Contactos</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Mais</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="reservas.php" class="dropdown-item">Reservas</a>
                                 <a href="team.php" class="dropdown-item">Nossa equipe</a>
                                 <a href="testimonial.php" class="dropdown-item">Testemunhos</a>
+                                <a href="sair.php" class="dropdown-item">Terminar sessão</a>
                             </div>
                         </div>
-                        <a href="contact.php" class="nav-item nav-link">Contactos</a>
                     </div>
-                    <a href="https://htmlcodex.com/hotel-html-template-pro"
-                        class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Login / Registo<i
-                            class="fa fa-arrow-right ms-3"></i></a>
+                    <?php
+                    session_start();
+                    if (!isset($_SESSION["id_cliente"])): ?>
+                        <a href="<?= URL ?>/control-interno/pages-login-cliente.php"
+                            class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Login /
+                            Registo<i class="fa fa-arrow-right ms-3"></i></a>
+                    <?php else: ?>
+                        <a href="<?= URL ?>/perfil.php" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">
+                            <?= explode(" ", $cliente['nome'])[0] ?>
+                            <i class="fa fa-arrow-right ms-3"></i>
+                        </a>
+                    <?php endif ?>
+
                 </div>
             </nav>
         </div>

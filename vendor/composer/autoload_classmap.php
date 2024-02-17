@@ -6,5 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Drive\\Conexao' => $baseDir . '/app/Drive/Conexao.php',
+    'App\\Model\\Auth' => $baseDir . '/app/Model/Auth.php',
+    'App\\Model\\Funcionarios' => $baseDir . '/app/Model/Funcionarios.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

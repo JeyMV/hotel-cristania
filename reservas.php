@@ -1,5 +1,10 @@
+<?php require './config.php';
+if (!isset($_SESSION["id_cliente"])) {
+    return header("location: ./");
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <?php
@@ -75,73 +80,83 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <form class="form-post">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" name="full_name" class="form-control" id="name"
-                                                placeholder="Escreva o seu nome" required>
+                                            <input type="text" class="form-control" id="name" value="<?=$cliente['nome']?>"
+                                                disabled readonly>
                                             <label for="name">Nome completo</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" name="email" class="form-control" id="email"
-                                                placeholder="email@provedor.com" required>
+                                            <input type="email" class="form-control" id="email"
+                                               value="<?= $cliente['email'] ?>" readonly disabled>
                                             <label for="email">E-mail</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" name="check_in" class="form-control datetimepicker-input"
+                                            <input type="datatime" name="check_in" class="form-control datetimepicker-input"
                                                 id="checkin" placeholder="Data de entrada" data-target="#date3"
                                                 data-toggle="datetimepicker" required />
-                                            <label for="checkin">Data de entrada</label>
+                                            <label for="checkin">Data/Hora - Entrada</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date4" data-target-input="nearest">
-                                            <input type="text" name="check_out"
+                                            <input type="datatime" name="check_out"
                                                 class="form-control datetimepicker-input" id="checkout"
                                                 placeholder="Data de saída" data-target="#date4"
                                                 data-toggle="datetimepicker" />
-                                            <label for="checkout">Data de saída</label>
+                                            <label for="checkout">Data/Hora - Saída</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select1">
-                                                <option value="1" selected>Adult 1</option>
-                                                <option value="2">Adult 2</option>
-                                                <option value="3">Adult 3</option>
+                                            <select class="form-select" name="num_adulto" id="select1">
+                                                <option value="1">1</option>
+                                                <option value="2">2 </option>
+                                                <option value="3">3</option>
                                             </select>
                                             <label for="select1">Quantos adultos?</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select2">
-                                                <option value="1" selected>Child 1</option>
-                                                <option value="2">Child 2</option>
-                                                <option value="3">Child 3</option>
+                                            <select class="form-select" name="num_crianca" id="select2">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
                                             </select>
-                                            <label for="select2">Quantas crianças</label>
+                                            <label for="select2">Quantas crianças?</label>
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-md-12 col-lg-12">
                                         <div class="form-floating">
-                                            <select class="form-select" id="select3">
-                                                <option value="1">Room 1</option>
-                                                <option value="2">Room 2</option>
-                                                <option value="3">Room 3</option>
+                                            <select class="form-select" name="id_quarto" id="select3">
+                                                <?php foreach ($quartos as $quarto):
+                                                    if ($quarto->status != 'ocupado'): ?>
+                                                        <option value="<?= $quarto->idquarto ?>">
+                                                            Quarto
+                                                            <?= $quarto->numero ?> -
+                                                            <?= $quarto->designacao_quarto ?> |
+                                                            <?= number_format($quarto->preco, 2, ',', '.') ?> Kz/Noite
+                                                        </option>
+                                                        <?php
+                                                    endif;
+                                                endforeach
+                                                ?>
                                             </select>
-                                            <label for="select3">Quartos disponíveis</label>
+                                            <label for="select3">Escolha um Quanto</label>
                                         </div>
                                     </div>
+
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Special Request" id="message"
-                                                style="height: 100px"></textarea>
+                                            <textarea class="form-control" name="comment" placeholder="Special Request" id="message"
+                                                style="height: 100px" required></textarea>
                                             <label for="message">Deixe um comentário sobre a sua solicitação e pedido de
                                                 reserva de quarto.</label>
                                         </div>
@@ -150,6 +165,8 @@
                                         <button class="btn btn-primary w-100 py-3" type="submit">Reservar Agora</button>
                                     </div>
                                 </div>
+                                <input type="hidden" name="id_cliente" value="<?= $cliente['id_cliente'] ?>">
+                                <input type="hidden" name="acao" value="solicitar-reserva">
                             </form>
                         </div>
                     </div>
@@ -184,9 +201,29 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="./control-interno/assets/js/sweet.js"></script>
+  <script>
+    $(function () {
+    $('#date3, #date4').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm',
+        icons: {
+            time: 'far fa-clock',
+            date: 'far fa-calendar',
+            up: 'fas fa-arrow-up',
+            down: 'fas fa-arrow-down',
+            previous: 'fas fa-chevron-left',
+            next: 'fas fa-chevron-right',
+            today: 'fas fa-calendar-check',
+            clear: 'far fa-trash-alt',
+            close: 'far fa-times-circle'
+        }
+    });
+});
 
+  </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="./js/ajax.js"></script>
 </body>
 
 </html>

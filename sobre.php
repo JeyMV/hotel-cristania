@@ -1,5 +1,7 @@
+<?php require './config.php'; ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <?php
@@ -25,7 +27,8 @@
 
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header mb-5 p-0"
+            style="background-image: url(https://scontent.flad1-1.fna.fbcdn.net/v/t39.30808-6/359461499_105515089281556_8859225315126786158_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeHY7uQ0wfKCnVtMtdS59AuSe6JaZ0iVXjV7olpnSJVeNSQvGTNErfiqYAZLVaAmNaFj2alMtxqiXW9YKoUYywI2&_nc_ohc=sOEiXqtKuDQAX-pzojK&_nc_ht=scontent.flad1-1.fna&oh=00_AfCer46Fybyhj0DoGfHZegzGayZ72l5aID9OCUbFVMfmrw&oe=65D348F1);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Sobre nós</h1>

@@ -21,6 +21,9 @@ class ComposerStaticInitb547e77607ce3d4636b860d0d503c689
     );
 
     public static $classMap = array (
+        'App\\Drive\\Conexao' => __DIR__ . '/../..' . '/app/Drive/Conexao.php',
+        'App\\Model\\Auth' => __DIR__ . '/../..' . '/app/Model/Auth.php',
+        'App\\Model\\Funcionarios' => __DIR__ . '/../..' . '/app/Model/Funcionarios.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
