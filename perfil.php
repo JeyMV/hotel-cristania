@@ -307,7 +307,7 @@ if (!isset($_SESSION["id_cliente"])) {
                                     </div>
 
                                     <input type="hidden" name="id_cliente" value="<?= $_SESSION["id_cliente"] ?>">
-
+                                    <input type="hidden" name="id_quarto" value=" <?= $reservas['id_quarto'] ?>">
                                     <input type="hidden" name="acao" value="efetuar-pagamento">
                                 </form>
                             </div>
@@ -375,6 +375,7 @@ if (!isset($_SESSION["id_cliente"])) {
     </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="./control-interno/assets/js/sweet.js"></script>
     <script src="./js/ajax.js"></script>
 
 </body>

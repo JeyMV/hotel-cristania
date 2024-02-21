@@ -5,6 +5,11 @@ use PDO;
 use PDOException;
 use App\Drive\Conexao;
 
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+ini_set('log_errors', 'On');
+ini_set('error_log', '/caminho/para/seu/diretorio/error.log');
+
 class Pagamentos
 {
     private static $conexao;
@@ -26,8 +31,8 @@ class Pagamentos
             $erro = '';
             $file_comprovativo = '';
 
-            $store = self::getInstance()->prepare("INSERT INTO tb_pagamentos (id_cliente, id_quarto, id_modo_pagamento, valor_pagemnto, status_pagamento, comprovativo)
-           VALUES(,?,?,?,?,?)");
+            $store = self::getInstance()->prepare("INSERT INTO tb_pagamentos (id_cliente, id_quarto, id_modo_pagamento, valor_pagemnto, comprovativo)
+           VALUES(?,?,?,?,?)");
 
             $arquivo = array(
                 'arquivo' => $comprovativo['name'],
@@ -52,14 +57,18 @@ class Pagamentos
                     mkdir($arquivo['diretorio'], 0777, true);
                 }
 
+
                 if (is_dir($arquivo['diretorio'])) {
                     # ===================================== TENTA O UPLOAD ==================
                     if (move_uploaded_file($arquivo['temporal'], $arquivo['diretorio'] . $arquivo['nome'])) {
-                        $comprovativo_path = $arquivo['nome'];
+                        $comprovativo_path = $arquivo['nome']; // Alteração aqui
                     } else {
-                        $erro = 'Falha no upload.' . $arquivo['diretorio'] . $arquivo['nome'];
+                        $erro = 'Falha no upload. Verifique as permissões do diretório.';
                     }
+                } else {
+                    $erro = 'Falha no upload. O diretório de destino não existe ou não pôde ser criado.';
                 }
+
 
             } else {
 

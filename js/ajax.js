@@ -8,7 +8,6 @@ function responseSweet(msg, type, title) {
     text: msg,
     timerProgressBar: true,
     timer: 5000,
-    showConfirmButton: false,
     customClass: {
       progressBar: "progress-bar-custore", // Aplica a classe CSS personalizada à barra de progresso
     },
@@ -34,12 +33,12 @@ form.addEventListener("submit", (e) => {
     .then((res) => res.json())
     .then((response) => {
       if (response.status == 200) {
-        responseSweet(response.msg, "success", "Boa!!");
+        responseSweet(response.msg, "success", "SUCESSO");
         setTimeout(() => {
           location.reload();
-        }, 1500);
+        }, 10000);
       } else {
-        responseSweet(response.msg, "error", "Oopss!!");
+        responseSweet(response.msg, "error", "ERRO!!");
       }
     });
 });
