@@ -5,6 +5,7 @@ require_once './vendor/autoload.php';
 use \App\Model\Auth;
 use App\Model\Clientes;
 use App\Model\Funcionarios;
+use App\Model\Pagamentos;
 use App\Model\Quartos;
 use App\Model\Reservas;
 
@@ -35,7 +36,8 @@ if (isset($_POST["acao"]) && $_POST["acao"] != "") {
     $id_quarto = filter_input(INPUT_POST, 'id_quarto', FILTER_SANITIZE_NUMBER_INT);
     $num_crianca = htmlspecialchars(filter_input(INPUT_POST, 'num_crianca', FILTER_SANITIZE_NUMBER_INT));
     $id_modo_pagamento = htmlspecialchars(filter_input(INPUT_POST, 'metodo_pagamento'));
-    $comprovativo = $_FILES['metodo_pagamento'];
+    $comprovativo = $_FILES['comprovativo'];
+    $valor_pagamento = htmlspecialchars(filter_input(INPUT_POST, 'valor_pagamento'));
 
     switch ($acao) {
         case "auth-login":
@@ -64,6 +66,12 @@ if (isset($_POST["acao"]) && $_POST["acao"] != "") {
         case "solicitar-reserva":
 
             print json_encode(Reservas::register($id_cliente, $id_quarto, $num_adulto, $num_crianca, $check_in, $check_out, $comment));
+
+            break;
+
+        case "efetuar-pagamento":
+
+            print json_encode(Pagamentos::store($id_cliente, $id_quarto, $id_modo_pagamento, $valor_pagamento, $comprovativo));
 
             break;
 
