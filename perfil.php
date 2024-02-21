@@ -203,7 +203,8 @@ if (!isset($_SESSION["id_cliente"])) {
 
                             </div>
                             <div class="mb-3 mt-3 text-center">
-                                <a href="#!" class="btn btn-primary w-100">Efetuar Pagamento</a>
+                                <a href="#!" class="btn btn-primary w-100" data-toggle="modal"
+                                    data-target="#staticBackdrop">Efetuar Pagamento</a>
                             </div>
                         </div>
 
@@ -230,12 +231,98 @@ if (!isset($_SESSION["id_cliente"])) {
         </div>
 
 
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title text-white" id="staticBackdropLabel">Pagamento do Serviço</h5>
+                        <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <span class="text-lead">Escolha o Método de Pagamento</span>
+                                </div>
+                                <hr>
+                                <form action="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Transfência
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Referência
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios3" value="option3">
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            Depósito
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios4" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios4">
+                                            TPA
+                                        </label>
+                                    </div>
+
+                                    <div class="alert alert-primary mt-2">
+                                        <span>O pagamento está pendente até enviar o comprovativo do pegamento pelo
+                                            nosso whatsapp e o mesmo ser verficado. Serás redecionado
+                                            automáticamamente.</span>
+                                    </div>
+
+                                    <div class="mb-2 mt-2">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <label class="custom-file-label" for="customFile">Carregue o comprativo
+                                                (pdf,
+                                                png, jpg)</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer mt-2">
+                                        <button type="button" class="btn btn-primary w-100 rounded-3">Finalizar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -279,6 +366,13 @@ if (!isset($_SESSION["id_cliente"])) {
     </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+
+    </script>
 </body>
 
 </html>
