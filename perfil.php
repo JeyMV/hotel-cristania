@@ -286,6 +286,12 @@ if (!isset($_SESSION["id_cliente"])) {
                                             automáticamamente.</span>
                                     </div>
 
+                                    <div class="mt-3 mb-3">
+                                        <label for="v">Valor a pagar</label>
+                                        <input type="text" name="valor_pagamento" class="form-control" value=" <?= $reservas['preco'] ?> "
+                                            readonly>
+                                    </div>
+
                                     <div class="mb-2 mt-2">
                                         <div class="custom-file">
                                             <input type="file" name="comprovativo" class="custom-file-input"
