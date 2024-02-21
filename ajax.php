@@ -34,7 +34,8 @@ if (isset($_POST["acao"]) && $_POST["acao"] != "") {
     $num_adulto = htmlspecialchars(filter_input(INPUT_POST, 'num_adulto', FILTER_SANITIZE_NUMBER_INT));
     $id_quarto = filter_input(INPUT_POST, 'id_quarto', FILTER_SANITIZE_NUMBER_INT);
     $num_crianca = htmlspecialchars(filter_input(INPUT_POST, 'num_crianca', FILTER_SANITIZE_NUMBER_INT));
-
+    $id_modo_pagamento = htmlspecialchars(filter_input(INPUT_POST, 'metodo_pagamento'));
+    $comprovativo = $_FILES['metodo_pagamento'];
 
     switch ($acao) {
         case "auth-login":
