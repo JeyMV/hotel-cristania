@@ -250,31 +250,31 @@ if (!isset($_SESSION["id_cliente"])) {
                                     <span class="text-lead">Escolha o Método de Pagamento</span>
                                 </div>
                                 <hr>
-                                <form action="">
+                                <form class="form-post" action="" enctype="multipart/form-data">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios"
-                                            id="exampleRadios1" value="option1" checked>
+                                        <input class="form-check-input" name="metodo_pagamento" type="radio"
+                                            name="exampleRadios" id="exampleRadios1" value="3" checked>
                                         <label class="form-check-label" for="exampleRadios1">
-                                            Transfência
+                                            Transfêrencia
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios"
-                                            id="exampleRadios2" value="option2">
+                                        <input class="form-check-input" name="metodo_pagamento" type="radio"
+                                            name="exampleRadios" id="exampleRadios2" value="2">
                                         <label class="form-check-label" for="exampleRadios2">
                                             Referência
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios"
-                                            id="exampleRadios3" value="option3">
+                                        <input class="form-check-input" name="metodo_pagamento" type="radio"
+                                            name="exampleRadios" id="exampleRadios3" value="1">
                                         <label class="form-check-label" for="exampleRadios3">
                                             Depósito
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios"
-                                            id="exampleRadios4" value="option1" checked>
+                                        <input class="form-check-input" name="metodo_pagamento" type="radio"
+                                            name="exampleRadios" id="exampleRadios4" value="4" checked>
                                         <label class="form-check-label" for="exampleRadios4">
                                             TPA
                                         </label>
@@ -288,7 +288,8 @@ if (!isset($_SESSION["id_cliente"])) {
 
                                     <div class="mb-2 mt-2">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="customFile">
+                                            <input type="file" name="comprovativo" class="custom-file-input"
+                                                id="customFile" required>
                                             <label class="custom-file-label" for="customFile">Carregue o comprativo
                                                 (pdf,
                                                 png, jpg)</label>
@@ -296,8 +297,12 @@ if (!isset($_SESSION["id_cliente"])) {
                                     </div>
 
                                     <div class="modal-footer mt-2">
-                                        <button type="button" class="btn btn-primary w-100 rounded-3">Finalizar</button>
+                                        <button type="submit" class="btn btn-primary w-100 rounded-3">Finalizar</button>
                                     </div>
+
+                                    <input type="hidden" name="id_cliente" value="<?= $_SESSION["id_cliente"] ?>">
+
+                                    <input type="hidden" name="acao" value="efetuar-pagamento">
                                 </form>
                             </div>
                         </div>
@@ -307,8 +312,6 @@ if (!isset($_SESSION["id_cliente"])) {
                 </div>
             </div>
         </div>
-
-
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -366,13 +369,8 @@ if (!isset($_SESSION["id_cliente"])) {
     </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="./js/ajax.js"></script>
 
-    <script>
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
-
-    </script>
 </body>
 
 </html>
